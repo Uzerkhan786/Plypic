@@ -16,13 +16,13 @@ const PendingPageDetails = () => {
         }
         fetchProduct();
 
-    }, [review])
+    }, [])
     const show = () => {
         setFlag(!flag)
     }
 
     const postData = async () => {
-        const res = await fetch(`hhttps://plypicker-vvy3.onrender.com/api/v1/review/${id}`, {
+        const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/review/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 status: 'APPROVED',
@@ -35,7 +35,7 @@ const PendingPageDetails = () => {
         const json = await res.json();
         console.log(json);
         alert('You have approved the changes')
-        setFlag(!flag)
+
     }
 
     const rejectData = async () => {

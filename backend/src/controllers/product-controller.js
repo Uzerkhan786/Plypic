@@ -110,7 +110,7 @@ export const getUpdateProductControllers = async (req, res) => {
                     productName: req.body.productName,
                     productDescription: req.body.productDescription,
                     department: req.body.department,
-                    image: req.file.filename,
+                    image: req.body.image,
                     price: req.body.price
                 }
                 , {
