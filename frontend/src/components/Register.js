@@ -5,7 +5,7 @@ const Register = () => {
     const [user, setUser] = useState();
     const navigate = useNavigate();
     const postData = async () => {
-        const res = await fetch('http://localhost:3001/api/v1/user/register', {
+        const res = await fetch('https://plypicker-vvy3.onrender.com/api/v1/user/register', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {

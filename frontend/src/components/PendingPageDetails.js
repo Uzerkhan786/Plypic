@@ -10,7 +10,7 @@ const PendingPageDetails = () => {
 
     useEffect(() => {
         const fetchProduct = async () => {
-            const res = await fetch(`http://localhost:3001/api/v1/review/${id}`);
+            const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/review/${id}`);
             const json = await res.json();
             setReview(json?.data)
         }
@@ -22,7 +22,7 @@ const PendingPageDetails = () => {
     }
 
     const postData = async () => {
-        const res = await fetch(`http://localhost:3001/api/v1/review/${id}`, {
+        const res = await fetch(`hhttps://plypicker-vvy3.onrender.com/api/v1/review/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 status: 'APPROVED',
@@ -39,7 +39,7 @@ const PendingPageDetails = () => {
     }
 
     const rejectData = async () => {
-        const res = await fetch(`http://localhost:3001/api/v1/review/${id}`, {
+        const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/review/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 status: 'REJECTED',

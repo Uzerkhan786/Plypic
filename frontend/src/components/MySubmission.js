@@ -3,7 +3,7 @@ const MySubmission = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const [submission, setSubmission] = useState();
     const fetchData = async () => {
-        const res = await fetch(`http://localhost:3001/api/v1/review?author=${user?.data?._id}`);
+        const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/review?author=${user?.data?._id}`);
         const json = await res.json();
         setSubmission(json?.data);
     }
@@ -15,40 +15,7 @@ const MySubmission = () => {
             <h1 class="text-4xl text-red-500 font-bold text-center pb-10 ">Requested Submission </h1>
             {submission ? submission.map((item) => {
 
-                // return <div class="mx-auto max-w-5xl justify-center px-4 md:flex md:space-x-6 xl:px-0">
-                //     <div class="rounded-lg md:w-2/3">
-                //         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-                //             <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                //                 <div class="mt-5 sm:mt-0">
-                //                     <h2 class="text-lg font-bold text-gray-900">{item.update.productName}</h2>
-                //                 </div>
-                //                 <div class="mt-5 sm:mt-0">
-                //                     <h2 class="text-lg font-bold text-gray-900">₹- {item.update.price}</h2>
-                //                 </div>
-                //                 <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-                //                     <div class="flex items-center space-x-4">
-                //                         <button type="button" class="text-white bg-blue-700 p-2 rounded-xl">{item.status}</button>
-                //                     </div>
-                //                 </div>
-                //             </div>
-
-
-                //             <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                //                 <div class="mt-5 sm:mt-0">
-                //                     <h2 class="text-lg font-bold text-gray-900">{item.update.productName}</h2>
-                //                 </div>
-                //                 <div class="mt-5 sm:mt-0">
-                //                     <h2 class="text-lg font-bold text-gray-900">₹- {item.update.price}</h2>
-                //                 </div>
-                //                 <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-                //                     <div class="flex items-center space-x-4">
-                //                         <button type="button" class="text-white bg-blue-700 p-2 rounded-xl">{item.status}</button>
-                //                     </div>
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // </div>
+                
 
                 return <div class="mx-auto max-w-5xl justify-center px-4 md:flex md:space-x-6 xl:px-0 ">
                     <div class="rounded-lg md:w-2/3">

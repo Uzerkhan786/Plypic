@@ -9,7 +9,7 @@ const Product = () => {
   const [product, setProduct] = useState();
   const { id } = useParams();
   const fetchProduct = async () => {
-    const res = await fetch(`http://localhost:3001/api/v1/products/${id}`);
+    const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/products/${id}`);
     const json = await res.json();
     setProduct(json?.data);
   }
@@ -21,7 +21,7 @@ const Product = () => {
 
   const [item, setItem] = useState(null);
   const updateData = async () => {
-    const res = await fetch(`http://localhost:3001/api/v1/products/${id}`, {
+    const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/products/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
         email: user.data.email,

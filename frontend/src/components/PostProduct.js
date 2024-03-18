@@ -5,7 +5,7 @@ const PostProduct = () => {
     const [name, setName] = useState(null);
     const inputRef = useRef();
     const postData = async () => {
-        const res = await fetch(`http://localhost:3001/api/v1/products`, {
+        const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/products`, {
             method: 'POST',
             body: JSON.stringify(files),
             // headers: {

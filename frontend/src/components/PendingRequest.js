@@ -5,7 +5,7 @@ const PendingRequest = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const [request, setRequest] = useState(null);
     const fetchData = async () => {
-        const res = await fetch(`http://localhost:3001/api/v1/review`);
+        const res = await fetch(`https://plypicker-vvy3.onrender.com/api/v1/review`);
         const json = await res.json();
         if (json.data.length !== 0) {
             setRequest(json?.data);
