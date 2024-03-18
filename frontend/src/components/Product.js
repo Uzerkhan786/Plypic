@@ -5,7 +5,7 @@ const Product = () => {
 
 
   const user = JSON.parse(localStorage.getItem('user'));
-  const [flag, setFlag] = useState(true)
+
   const [product, setProduct] = useState();
   const { id } = useParams();
   const fetchProduct = async () => {
@@ -16,7 +16,7 @@ const Product = () => {
   useEffect(() => {
     fetchProduct();
     console.log(product);
-  }, [product])
+  }, [])
 
 
   const [item, setItem] = useState(null);
@@ -43,7 +43,7 @@ const Product = () => {
     if (item == null) {
       return toast.error('Please edit some thing')
     }
-    setFlag(!flag)
+
     updateData();
 
   }
