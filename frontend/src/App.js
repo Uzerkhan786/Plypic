@@ -13,7 +13,7 @@ export const router = createBrowserRouter([{
   path: '/',
   element: <App />,
   children: [{
-    path: '/register',
+    path: '/',
     element: <Register />
   }, {
     path: '/login',
@@ -44,6 +44,10 @@ export const router = createBrowserRouter([{
   }, {
     path: '/create',
     element: <PostProduct />
+  },
+  {
+    path: '/register',
+    element: <Register />
   }
     //do error handling
   ]
